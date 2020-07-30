@@ -1,0 +1,13 @@
+
+<nav class="row justify-content-around navbar-custom align-items-center" Style="height: 15vh; width:100%">
+  <h3 class="col-12 text-center" style="color:white">Image Gallery</h3>
+</nav>
+
+<div class="container" *ngIf="Items">
+  <div class="row justify-content-around" Style="height: 80vh; width:100%">
+    <div class="col-lg-3 col-md-6 col-sm-12 m-3" style="min-height:40vh" *ngFor="let item of Items">
+      <img alt="" [lazyLoad]="item.urls.regular" class="lazy-loading" />
+    </div>
+  </div>
+</div>
+
